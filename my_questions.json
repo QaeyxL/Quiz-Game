@@ -1,0 +1,54 @@
+{
+    "questions": [
+        {
+            "question": "Who sang the song, Fireworks?",
+            "options": [
+                "Katy Perry",
+                "Taylor Swift",
+                "Ed Sheeran",
+                "Hozier"
+            ],
+            "answer": "Katy Perry"
+        },
+        {
+            "question": "Who sang the song, Party in the USA?",
+            "options": [
+                "Justin Bieber",
+                "Rina Sawayama",
+                "Miley Cyrus",
+                "Nicki Minaj"
+            ],
+            "answer": "Miley Cyrus"
+        },
+        {
+            "question": "Who sang the song, Ice Cream?",
+            "options": [
+                "Itzy ft. Selena Gomez",
+                "Blackpink ft. Selena Gomez",
+                "Jeon Somi",
+                "IU"
+            ],
+            "answer": "Blackpink ft. Selena Gomez"
+        },
+        {
+            "question": "Who sang the song, Call Me Maybe?",
+            "options": [
+                "Sabrina Carpenter",
+                "Olivia Rodrigo",
+                "Carly Rae Jepsen",
+                "Laufey"
+            ],
+            "answer": "Carly Rae Jepsen"
+        },
+        {
+            "question": "Who sang the song, Beautiful Stranger?",
+            "options": [
+                "Lana Del Rey",
+                "Laufey",
+                "Beyonce",
+                "Rihanna"
+            ],
+            "answer": "Laufey"
+        }
+    ]
+}
