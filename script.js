@@ -15,7 +15,7 @@ let correctAnswer = "",
 let previousIndex = -1;
 
 async function loadQuestion() {
-  const APIUrl = "/my_questions.json";
+  const APIUrl = "https://qaeyxl.github.io/Quiz-Game/my_questions.json";
   const result = await fetch(APIUrl);
   const data = await result.json();
   _result.innerHTML = "";
