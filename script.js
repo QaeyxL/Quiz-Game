@@ -1,15 +1,29 @@
-const startButton = document.querySelector('.start-game-button');
-const quizContainer = document.querySelector('.quiz-container-hidden');
-const wrapper = document.querySelector('.wrapper');
+function startGame() {
+  var ageConfirmation = document.getElementById("confirmation");
+  var content = document.getElementById("content");
 
-wrapper.style.display = 'none'; // hide the wrapper initially
+  ageConfirmation.classList.add("hidden");
+  content.classList.remove("hidden");
+}
 
-startButton.addEventListener('click', function() {
-  quizContainer.classList.remove('quiz-container-hidden');
-  wrapper.style.display = 'block';
+window.addEventListener("load", function () {
+  var ageConfirmation = document.getElementById("confirmation");
+
+  ageConfirmation.classList.remove("hidden");
 });
 
-document.querySelector('.wrapper').style.display = 'block';
+const startButton = document.querySelector(".start-game-button");
+const quizContainer = document.querySelector(".quiz-container-hidden");
+const wrapper = document.querySelector(".wrapper");
+
+wrapper.style.display = "none"; // hide the wrapper initially
+
+startButton.addEventListener("click", function () {
+  quizContainer.classList.remove("quiz-container-hidden");
+  wrapper.style.display = "none";
+});
+
+document.querySelector(".wrapper").style.display = "block";
 const _question = document.getElementById("question");
 const _options = document.querySelector(".quiz-options");
 const _checkBtn = document.getElementById("check-answer");
@@ -39,24 +53,24 @@ async function loadQuestion() {
   showQuestion(data.questions[randomIndex]);
 }
 
-fetch('questions.json')
-  .then(response => response.json())
-  .then(data => {
+fetch("questions.json")
+  .then((response) => response.json())
+  .then((data) => {
     const questions = data.questions;
     let currentQuestionIndex = 0;
-    const quizOptions = document.querySelector('.quiz-options');
-    const quizScore = document.getElementById('correct-score');
-    const quizTotalQuestion = document.getElementById('total-question');
-    const checkAnswerButton = document.getElementById('check-answer');
-    const playAgainButton = document.getElementById('play-again');
+    const quizOptions = document.querySelector(".quiz-options");
+    const quizScore = document.getElementById("correct-score");
+    const quizTotalQuestion = document.getElementById("total-question");
+    const checkAnswerButton = document.getElementById("check-answer");
+    const playAgainButton = document.getElementById("play-again");
 
     function loadQuestion() {
       const currentQuestion = questions[currentQuestionIndex];
       _question.textContent = currentQuestion.question;
-      quizOptions.innerHTML = '';
+      quizOptions.innerHTML = "";
       for (const option of currentQuestion.options) {
-        const li = document.createElement('li');
-        const button = document.createElement('button');
+        const li = document.createElement("li");
+        const button = document.createElement("button");
         button.textContent = option;
         li.appendChild(button);
         quizOptions.appendChild(li);
@@ -65,12 +79,12 @@ fetch('questions.json')
 
     function startQuiz() {
       loadQuestion();
-      checkAnswerButton.addEventListener('click', checkAnswer);
-      playAgainButton.addEventListener('click', playAgain);
+      checkAnswerButton.addEventListener("click", checkAnswer);
+      playAgainButton.addEventListener("click", playAgain);
     }
 
     function checkAnswer() {
-      const selectedOption = quizOptions.querySelector('li.active button');
+      const selectedOption = quizOptions.querySelector("li.active button");
       if (!selectedOption) {
         return;
       }
@@ -81,7 +95,9 @@ fetch('questions.json')
         correctScore++;
       }
       askedCount++;
-      _result.innerHTML = isCorrect ? `<p><i class="fas fa-check"></i>Correct Answer!</p>` : `<p><i class="fas fa-times"></i>Incorrect Answer!</p><small><b>Correct Answer: </b>${answer}</small>`;
+      _result.innerHTML = isCorrect
+        ? `<p><i class="fas fa-check"></i>Correct Answer!</p>`
+        : `<p><i class="fas fa-times"></i>Incorrect Answer!</p><small><b>Correct Answer: </b>${answer}</small>`;
       currentQuestionIndex++;
       if (currentQuestionIndex === questions.length) {
         endQuiz();
@@ -101,15 +117,15 @@ fetch('questions.json')
     function endQuiz() {
       const percentCorrect = ((correctScore / askedCount) * 100).toFixed(2);
       _question.textContent = `Quiz Over! You scored ${percentCorrect}%`;
-      quizOptions.innerHTML = '';
-      checkAnswerButton.removeEventListener('click', checkAnswer);
-      playAgainButton.removeEventListener('click', playAgain);
+      quizOptions.innerHTML = "";
+      checkAnswerButton.removeEventListener("click", checkAnswer);
+      playAgainButton.removeEventListener("click", playAgain);
     }
 
     quizTotalQuestion.textContent = questions.length;
     startQuiz();
   })
-  .catch(error => {
+  .catch((error) => {
     console.error(error);
   });
 

@@ -1,31 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guess that Singer!</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-  <link rel="stylesheet" href="style.css"/>
- </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess that Singer!</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
- <body class="flex">
-    <div class="wrapper">
+  <body class="flex">
+    <div class="wrapper hidden" id="confirmation">
       <section>
         <nav>
-          <h1>Intro</h1><br>
-          <p>How well do you know,<br> pop culture from the last decade? Play the game to find out</p>
-          <br><button class="start-game-button">-> Click here to Start Game <- </button>
+          <h1>Intro</h1>
+          <br />
+          <p>
+            How well do you know,<br />
+            pop culture from the last decade? Play the game to find out
+          </p>
+          <br /><button class="start-game-button" onclick="startGame()">
+            Click here to Start Game
+          </button>
         </nav>
         <article>
           <h1>Guess that Singer!</h1>
-          <p>Play it alone or with friends, it's your typical guessing game. "Guess That Singer!" is a fun and engaging game that challenges players to identify famous singers based on the random title provided in each question. The format goes like: Who sang the song, _____. Players must use their knowledge of music, pop culture, and famous singers to correctly guess the name of the singer out of 4 options. The game progresses only until you reach a score of 5, and you are welcome to play again if you would like.</p><br>
+          <p>
+            Play it alone or with friends, it's your typical guessing game.
+            "Guess That Singer!" is a fun and engaging game that challenges
+            players to identify famous singers based on the random title
+            provided in each question. The format goes like: Who sang the song,
+            _____. Players must use their knowledge of music, pop culture, and
+            famous singers to correctly guess the name of the singer out of 4
+            options. The game progresses only until you reach a score of 5, and
+            you are welcome to play again if you would like.
+          </p>
+          <br />
         </article>
       </section>
     </div>
-    
-    <div class="game-container">
-     <div class="quiz-container-hidden">
+
+    <div class="game-container hidden" id="content">
+      <div class="quiz-container-hidden">
         <div class="quiz-head">
           <h1 class="quiz-title">Quiz Game</h1>
           <div class="quiz-score flex">
@@ -41,9 +63,9 @@
           <button type="button" id="check-answer">Check Answer</button>
           <button type="button" id="play-again">Play Again!</button>
         </div>
-     </div>
+      </div>
     </div>
 
     <script src="script.js"></script>
- </body>
+  </body>
 </html>
