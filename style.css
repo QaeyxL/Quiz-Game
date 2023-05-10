@@ -50,10 +50,11 @@ body {
 }
 
 nav {
+  color: white;
   float: left;
   width: 35%;
-  height: 410px;
-  background: #ccc;
+  height: 405px;
+  background: #9933ff;
   padding: 10px;
   font-size: 18px;
   font-style: italic;
@@ -64,7 +65,7 @@ article {
   float: left;
   padding: 20px;
   width: 65%;
-  background-color: #f1f1f1;
+  background-color: #hsl(249, 53%, 75%);
 }
 
 article p {
