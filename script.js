@@ -202,7 +202,7 @@ function HTMLDecode(textString) {
 function checkCount() {
   setCount();
   if (askedCount == totalQuestion) {
-    _result.innerHTML += `<p>Thanks for playing. Your score is ${correctScore}.</p>`;
+    _result.innerHTML += `<p>Your score is ${correctScore}.</p>`;
     _playAgainBtn.style.display = "block";
     _checkBtn.style.display = "none";
   } else {
