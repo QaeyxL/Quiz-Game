@@ -74,60 +74,21 @@ section::after {
   clear: both;
 }
 
-$turquoise: #1abc9c;
-
 .button {
-  border-radius: 3em;
-  border-color: $turquoise;
-  color: #fff;
-  background-image: linear-gradient(to right, 
-    transparentize($turquoise, 0.4),
-    transparentize($turquoise, 0.4) 5%,
-    $turquoise 5%, 
-    $turquoise 10%,
-    transparentize($turquoise, 0.4) 10%,
-    transparentize($turquoise, 0.4) 15%,
-    $turquoise 15%, 
-    $turquoise 20%,
-    transparentize($turquoise, 0.4) 20%,
-    transparentize($turquoise, 0.4) 25%,
-    $turquoise 25%, 
-    $turquoise 30%,
-    transparentize($turquoise, 0.4) 30%,
-    transparentize($turquoise, 0.4) 35%,
-    $turquoise 35%, 
-    $turquoise 40%,
-    transparentize($turquoise, 0.4) 40%,
-    transparentize($turquoise, 0.4) 45%,
-    $turquoise 45%, 
-    $turquoise 50%,
-    transparentize($turquoise, 0.4) 50%,
-    transparentize($turquoise, 0.4) 55%,
-    $turquoise 55%, 
-    $turquoise 60%,
-    transparentize($turquoise, 0.4) 60%,
-    transparentize($turquoise, 0.4) 65%,
-    $turquoise 65%, 
-    $turquoise 70%,
-    transparentize($turquoise, 0.4) 70%,
-    transparentize($turquoise, 0.4) 75%,
-    $turquoise 75%, 
-    $turquoise 80%,
-    transparentize($turquoise, 0.4) 80%,
-    transparentize($turquoise, 0.4) 85%,
-    $turquoise 85%, 
-    $turquoise 90%,
-    transparentize($turquoise, 0.4) 90%,
-    transparentize($turquoise, 0.4) 95%,
-    $turquoise 95%, 
-    $turquoise 100%);
-  background-position: 0 0;
-  background-size: 100%;
-  transition: background 300ms ease-in-out;
-}
+    background-color: #aa98a9;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 15%;
+    position: auto;
+    bottom: 10%;
+    right: 10%;
+}   
 
-.button:hover {
-  background-position: 100px;
+.active, .button:hover {
+  background-color: #ccc;
 }
 
 .quiz-container-hidden {
