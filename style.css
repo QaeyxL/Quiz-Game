@@ -85,7 +85,7 @@ section::after {
   font-size: 16px;
   cursor: pointer;
   text-align: center;
-  border-radius: 15%;
+  border-radius: 30px;
   position: auto;
   bottom: 10%;
   right: 10%;
