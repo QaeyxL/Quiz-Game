@@ -38,11 +38,12 @@ body {
 }
 
 .game-container {
-  top: 20px; /* adjust this value as needed */
+  top: 20px;
   background-color: #f1f1f1;
   padding: 20px;
   width: 600px;
-  margin: 0 auto;
+  margin: 0 auto; 
+  position: relative;
 }
 
 nav {
